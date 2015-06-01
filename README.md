@@ -10,7 +10,7 @@ Before starting to launch please, configure the folowwing file, to make this pro
 - app/config/parameters.yml  (add the informations for the database connection) 
 - make all the file with the great permissions, to be executed in your term, or in your browser.
 - execute those commande in the repositories : 
-    -   php app/console doctrine:datables:create
+    -   php app/console doctrine:database:create
     -   php app/console cache:clear --env=prod --no-debug
 
 2) Browsing the Demo Application
