@@ -1,0 +1,4 @@
+yha_main:
+    resource: "@YHAMainBundle/Resources/config/routing.yml"
+    prefix:   /
+

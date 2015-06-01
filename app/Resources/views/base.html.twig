@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>yhabdullah.com</title>
+        {% stylesheets '@bootstrap_css' '@YHAMainBundle/Resources/public/css/*' filter='cssrewrite' %}
+        	<link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+       		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		{% endstylesheets %}
+	</head>
+    <body >
+		<!-- BACKGROUND  -->
+		<section id="background"></section>
+		<!--end BACKGROUND -->
+    	{% block body %}{% endblock %}
+    	{% javascripts '@jquery' '@bootstrap_js' '@YHAMainBundle/Resources/public/js/*' %}
+    		<script type="text/javascript" src="{{ asset_url }}"></script>
+    		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    	{% endjavascripts %}
+    </body>
+</html>

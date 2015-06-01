@@ -1,0 +1,13 @@
+message:
+    path:     /
+    defaults: { _controller: "YHAMainBundle:Message:index" }
+
+message_show:
+    path:     /{id}/show
+    defaults: { _controller: "YHAMainBundle:Message:show" }
+
+message_create:
+    path:     /create
+    defaults: { _controller: "YHAMainBundle:Message:create" }
+    requirements: { _method: post }
+

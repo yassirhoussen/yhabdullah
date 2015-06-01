@@ -1,0 +1,15 @@
+yha_main_home:
+    path:     /
+    defaults: { _controller: YHAMainBundle:Default:index, message: default }
+
+yha_main_homepage:
+    path:     /{message}
+    defaults: { _controller: YHAMainBundle:Default:index, message: default }
+
+download_route:
+    pattern:  /download/{filename}
+    defaults: { _controller: YHAMainBundle:Default:download }
+
+YHAMainBundle_message:
+    resource: "@YHAMainBundle/Resources/config/routing/message.yml"
+    prefix:   /message

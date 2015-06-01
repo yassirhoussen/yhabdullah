@@ -1,0 +1,365 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+
+	<!-- MAIN CONTENT -->
+	<section id="content-wrap">
+		<div class="container-liquid">
+			<div class="row">
+				<header class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-content">
+					{% if message == "success" %}
+						<h4 id="cf-success">
+							<p class="text-success">
+								<i class="fa fa-check"></i> Your message was sent succssfully!
+							</p>
+						</h4>
+					{% endif %}
+					{% if message == "failed" %}
+						<h4 id="cf-error">
+							<p class="text-warning">
+								<i class="fa fa-times"></i> Something went wrong, try refreshing and submitting the form again.
+							</p>
+						</h4>
+					{% endif %}
+					<div class="profile-avatar overlay">
+						{% image '@YHAMainBundle/Resources/public/images/yassir_10p.jpg' %}
+    						<img src="{{ asset_url }}" alt="My Photo" style="width: 182px;" />
+						{% endimage %}
+					</div>
+					<span class="me">
+						Yassir Houssen Abdullah
+					</span>
+					<p class="meText">
+						Hi, I’m a  <span>software</span> and <span>web developer</span>. I love being minimal and creative. Do you want to know more about me?!
+					</p>
+				</header>
+			</div>
+			
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<!-- TAB PANEL -->
+					<div class="tabpanel">
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation">
+								<a href="#about" aria-controls="about" role="tab" data-toggle="tab">
+									<h4><span><i class="fa fa-user"></i> About</span></h4>
+								</a>
+							</li>
+							<li role="presentation">
+								<a href="#resume" aria-controls="resume" role="tab" data-toggle="tab">
+									<h4><span><i class="fa fa-globe"></i> Resume</span></h4>
+								</a>
+							</li>
+							<li role="presentation">
+								<a href="#contact" aria-controls="contact1" role="tab" data-toggle="tab">
+									<h4><span><i class="fa fa-envelope"></i> Contact</span></h4>
+								</a>
+							</li>
+							<li role="presentation">
+								<a href="#blog" aria-controls="blog" role="tab" data-toggle="tab">
+									<h4><span><i class="fa fa-rss"></i> Blog</span></h4>
+								</a>
+							</li>
+						</ul>
+					</div> 
+					<!-- end TAB PANEL -->
+					
+					<!-- TAB CONTENT -->
+					<div class="tab-content">
+					 	<!-- ABOUT -->
+							<div role="tabpanel" id="about" class="tab-pane fade in active">
+								<div class="container-liquid">
+									<!-- TITLE -->
+									<div class="row">
+										<header class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cat-pages-title">
+											<div class="title-seprator"></div>
+											<h2>
+												about me
+											</h2>
+										</header>
+									</div><!-- end TITLE -->
+								
+									<!-- DESCRIPTION -->
+									<div class="row">
+										<div class="col-lg-8 col-md-9 col-sm-9 col-xs-10 about-description">
+											<p>
+												IT is more than a job, it's a true passion. I discovered this world, at my arrival in France, and never change my mind about that.
+											</p><br/>
+											<p>Currently, i'm working as a software engineer, In a small company near Paris, France. The position, i hold, makes me work in various environnement, makes me discover different aspect of my job, and managed a team.Everyday is different, i learn new things, and keep my mind open.
+											</p><br/>
+											<p>
+												In my medium-term vision, I wish to continue in this way, to gain experiences and skills, to become quickly a project manager. In my long-term vison, I want to become a technical director, or head of departement or even ride my own IT company one day. 
+											</p>
+										</div>
+									</div><!-- end DESCRIPTION -->
+									
+									<div class="row">
+										<header class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cat-pages-title">
+											<div class="title-seprator"></div>
+											<h2>
+												What defines me
+											</h2>
+										</header>
+									</div><!-- end TITLE -->
+									
+									<!-- ICONBOX -->
+									<div class="row">
+										<div class="col-lg-8 col-md-9 col-sm-9 col-xs-9 iconbox">
+											<ul>
+												<li>
+													<i class="fa fa-line-chart"></i>
+													<h3>
+														ambitious
+													</h3>
+													<p>
+														I am ambitious and judge my work by the success I achieve.
+													</p>
+												</li>
+												<li class="iconbox-right">
+													<i class="fa fa-child"></i>
+													<h3>
+														open mind
+													</h3>
+													<p>
+														I'm adaptible to new situations and ready to accept new attitudes for learning and assimilating new things.
+													</p>
+												</li>
+												<li>
+													<i class="fa fa-bolt"></i>
+													<h3>
+														perfectionist
+													</h3>
+													<p>
+														Without being a perfectionist, I like things well done and tidy work.
+													</p>
+												</li>
+											</ul>
+										</div>
+									</div><!-- end ICONBOX -->
+									
+									<!-- download BUTTON -->
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<div class="about-buttons">
+												<h4><a class="btn btn-lg" href="{{ path('download_route', {'filename': 'CV_YassirHoussenAbdullah.pdf'}) }}">Download Resume</a></h4>
+											</div>
+										</div>
+									</div><!-- end BUTTON -->
+
+								</div>
+							</div>
+						
+						<!-- RESUME -->
+						<div role="tabpanel" id="resume" class="tab-pane fade">
+							<div class="container-liquid">
+
+								<!-- TITLE -->
+								<div class="row">
+									<header class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cat-pages-title">
+										<div class="title-seprator"></div>
+										<h2>
+											resume
+										</h2>
+									</header>
+								</div><!-- end TITLE -->
+
+								<!-- TIMELINE -->
+								<div class="row">
+									<div class="col-lg-9 col-md-9 col-sm-9 col-xs-10 timeline">
+					
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 timeline-left">
+											<i class="fa fa-graduation-cap"></i>
+											<h3>
+												education
+											</h3>
+											<ul>
+												<li style="margin-top: 80px;">
+													<span>
+														Septembre 2012 - July 2014
+													</span>
+													<h4>
+														Master Degree of Computer Science (Apprenticeship)
+													</h4>
+													<p>
+														ETNA – Epitech, IONIS group 
+													</p>
+												</li>
+												<li>
+													<span>
+														Septembre 2011 - July 2012
+													</span>
+													<h4>
+														Master Degree in Cross Media and IT engineering
+													</h4>
+													<p>
+														Université Paris-Descartes (Paris - 5)
+													</p>
+												</li>
+												<li>
+													<span>
+														Septembre 2007 - July 2011
+													</span>
+													<h4>
+														Bachelor in Applied Mathematics and Computer science
+													</h4>
+													<p>
+														Université Paris-Descartes (Paris - 5)
+													</p>
+												</li>
+												<li>
+													<span>
+														Septembre 2006 
+													</span>
+													<h4>
+														French High-school diploma
+													</h4>
+													<p>
+														Lycée Français de Tamatave, Toamasina, Madagascar
+													</p>
+												</li>
+											</ul>
+										</div>
+					
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 timeline-right">
+											<i class="fa fa-briefcase"></i>
+											<h3>
+												employment
+											</h3>
+											<ul>
+												<li>
+													<span>
+														October 2014 - present
+													</span>
+													<h4>
+														Iyonn
+													</h4>
+													<p>
+														Software Developper
+													</p>
+												</li>
+												<li>
+													<span>
+														February 2013 - september 2014
+													</span>
+													<h4>
+														Plug-up International 
+													</h4>
+													<p>
+														Junior Developper (Apprenticeship program)
+													</p>
+												</li>
+												<li>
+													<span>
+														May 2010 - February 2013
+													</span>
+													<h4>
+														Ikea Paris Nord 2, Roissy, France 
+													</h4>
+													<p>
+														Ikea coworker (Student job)
+													</p>
+												</li>
+												<li>
+													<span>
+														April 2010 and Before 
+													</span>
+													<h4>
+														Others student/summer jobs
+													</h4>
+														<p> - 1 year : Private teacher in Mathematics. Paris, France.</p>
+												    	<p> - 15 days : grape picker in Epernay, France</p>
+												    	<p> - Summer 2005, 2006 : Seller in clothing store, family business (during school holidays) in Tamatave, Madagascar</p>
+												    	<p> - Summer 2003, 2004 : Carpentry learning during school holidays, family business in Tamatave, Madagascar</p>
+												</li>
+											</ul>
+										</div>
+					
+									</div>
+								</div><!-- end TIMELINE -->
+							</div>
+						</div>
+						<!-- end RESUME -->
+						
+						<!-- CONTACT -->
+						<div role="tabpanel" id="contact" class="tab-pane fade">
+							<div class="container-liquid">
+
+								<!-- TITLE -->
+								<div class="row">
+									<header class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cat-pages-title">
+										<div class="title-seprator"></div>
+										<h2>
+											contact
+										</h2>
+									</header>
+								</div><!-- end TITLE -->
+								
+								<!-- CONTACT INFO & FORM -->
+								<div class="row">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										<div class="col-lg-9 col-md-10 col-sm-10 col-xs-11 contact-section">
+					
+											<!-- CONTACT INFO -->
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contact-info">
+												<p>
+													Any Request, Any Suggestions, or just say Hello, let me a message and it will be a pleasure for me to reply you.
+												</p>
+												<ul>
+													<li>
+														<i class="fa fa-phone"></i>
+														<p>+33 (0)6 49 54 46 17</p>
+													</li>
+													<li>
+														<i class="fa fa-envelope"></i>
+														<p style="margin-top: -35px; margin-left: 20px;">yassirhoussen.abdullah@gmail.com</p>
+													</li>
+													<li>
+														<span>
+															Or just file the form bellow!
+														</span>
+													</li>
+												</ul>
+											</div><!-- end CONTACT INFO -->
+					
+					
+											<div class="col-lg-7 col-md-12 col-sm-7 col-xs-12 contact-form">
+												<form id="contactform" action="{{ path('message_create')}}" method="post" {{ form_enctype(form) }}>
+												    {{ form_widget(form) }}
+												    <button class="btn btn-sm"id="contactsubmit" type="submit"> SUBMIT</button>
+												     {{ form_rest(form) }}
+												</form>
+											</div>
+										</div>
+									</div>
+								</div><!-- end CONTACT INFO & FORM -->
+
+							</div>
+						</div>
+						<div role="tabpanel" id="blog" class="tab-pane fade">
+							<div class="container-liquid">
+
+								<!-- TITLE -->
+								<div class="row">
+									<header class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cat-pages-title">
+										<div class="title-seprator"></div>
+										<h2>
+											Blog
+										</h2>
+									</header>
+								</div><!-- end TITLE -->
+								
+								<div class="row">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										<div class="col-lg-9 col-md-10 col-sm-9 col-xs-10 blog">
+										
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- end tab-content -->
+				</div>
+			</div>
+		</div>
+	</section><!-- end MAIN CONTENT -->
+
+{% endblock %}
